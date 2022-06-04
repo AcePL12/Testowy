@@ -19,12 +19,12 @@ legend{
     text-align: center;
     line-height: 40px;
 }
-input[type="text"]{
+input{
     text-align: center;
     
 }
+
 input[type="submit"]{
-    text-align: center;
     float: right;
     width: 30%;
     height: 30%;
