@@ -1,0 +1,33 @@
+body{
+    background-color: gray;
+}
+fieldset{
+    background-color: lemonchiffon;
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    line-height: normal;
+    
+    
+}
+legend{
+    background-color: burlywood;
+    border-radius: 50%;
+    margin: auto;
+}
+.texty{
+    text-align: center;
+    line-height: 40px;
+}
+input[type="text"]{
+    text-align: center;
+    
+}
+input[type="submit"]{
+    text-align: center;
+    float: right;
+    width: 30%;
+    height: 30%;
+    background-color: beige;
+    border-radius: 50%;    
+}
