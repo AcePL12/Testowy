@@ -31,14 +31,14 @@ if (empty($login) || empty($pass)){
 else{
     echo("<div class='main'> Witaj ".$login."<br>");
     echo('<input type="button" value="Wyloguj" onclick="window.location=(\'formularz.html\')"> ');
-echo('<form method=post>');
-echo("<input type='hidden' name='login' value='$login'>");
-echo("<input type='hidden' name='pass' value='$pass' >");
-echo('<input type="submit" name="submit1" value="Wystartuj Naliczanie Sesji"> ');
-echo('<input type="submit" name="submit2" value="Zatrzymaj Naliczanie Sesji"> ');
-echo('<input type="submit" name="submit3" value="Resetuj Naliczanie Sesji"> ');
-echo('</form>');
-echo("</div>");
+    echo('<form method=post>');
+    echo("<input type='hidden' name='login' value='$login'>");
+    echo("<input type='hidden' name='pass' value='$pass' >");
+    echo('<input type="submit" name="submit1" value="Wystartuj Naliczanie Sesji"> ');
+    echo('<input type="submit" name="submit2" value="Zatrzymaj Naliczanie Sesji"> ');
+    echo('<input type="submit" name="submit3" value="Resetuj Naliczanie Sesji"> ');
+    echo('</form>');
+    echo("</div>");
 }
 
 
@@ -50,10 +50,7 @@ if(isset($_POST['submit2'])){
 } 
 if(isset($_POST['submit3'])){
     $_SESSION['licznik'] = 0;
-    
 } 
-
-
 
 ?>
 
