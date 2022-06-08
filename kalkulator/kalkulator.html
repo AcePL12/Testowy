@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="kalkulator.css">
+</head>
+<body>
+<div class="main">
+<p class="ekran" id="ekran"></p> <br>
+<div class="guzikC" onclick = "window.location.reload()">C</div>
+<div class="guzik" onclick ="siedem()">7</div>
+<div class="guzik" onclick ="osiem()">8</div>
+<div class="guzik" onclick ="dziewiec()">9</div>
+<div class="guzik" onclick ="plus()">+</div>
+<div class="guzik" onclick ="cztery()">4</div>
+<div class="guzik" onclick ="piec()">5</div>
+<div class="guzik" onclick ="szesc()">6</div>
+<div class="guzik" onclick ="minus()">-</div>
+<div class="guzik" onclick ="jeden()">1</div>
+<div class="guzik" onclick ="dwa()">2</div>
+<div class="guzik" onclick ="trzy()">3</div>
+<div class="guzik" onclick ="mnozenie()">*</div>
+<div class="guzik" onclick ="zero()">0</div>
+<div class="guzik" onclick ="kropka()">.</div>
+<div class="guzik" onclick ="wynik()">=</div>
+<div class="guzik" onclick ="dzielenie()">/</div>
+</div>
+<script>
+    function jeden(){
+        document.getElementById("ekran").innerHTML+="1" ;
+    }
+    function dwa(){
+        document.getElementById("ekran").innerHTML+="2" ;
+    }
+    function trzy(){
+        document.getElementById("ekran").innerHTML+="3" ;
+    }
+    function cztery(){
+        document.getElementById("ekran").innerHTML+="4" ;
+    }
+    function piec(){
+        document.getElementById("ekran").innerHTML+="5" ;
+    }
+    function szesc(){
+        document.getElementById("ekran").innerHTML+="6" ;
+    }
+    function siedem(){
+        document.getElementById("ekran").innerHTML+="7" ;
+    }
+    function osiem(){
+        document.getElementById("ekran").innerHTML+="8" ;
+    }
+    function dziewiec(){
+        document.getElementById("ekran").innerHTML+="9" ;
+    }
+    function zero(){
+        document.getElementById("ekran").innerHTML+="0" ;
+    }
+    function plus(){
+        document.getElementById("ekran").innerHTML+="+" ;
+    }
+    function minus(){
+        document.getElementById("ekran").innerHTML+="-" ;
+    }
+    function mnozenie(){
+        document.getElementById("ekran").innerHTML+="*" ;
+    }
+    function dzielenie(){
+        document.getElementById("ekran").innerHTML+="/" ;
+    }
+    function wynik(){
+       var a = document.getElementById("ekran").innerHTML;
+       var b = eval(a);
+       document.getElementById("ekran").innerHTML= b;
+
+    }
+    function kropka(){
+        document.getElementById("ekran").innerHTML += "." ;
+    }
+
+
+</script>
+</body>
+</html>
