@@ -1,0 +1,30 @@
+body{
+    background-color: lightslategray;
+}
+
+.wyswietl{
+    margin: auto;
+    width: 20%;
+    height: 10%;
+    text-align: center;
+    background-color: azure;
+    margin-top: 10px;
+    font-size: 500%;
+}
+fieldset{
+    margin: auto;
+    text-align: center;
+    width: 20%;
+    border: solid 2px blue;
+    background-color: royalblue;
+}
+input[type="submit"]{
+    background-color: violet;
+    border-radius: 40%;
+}
+legend{
+    background-color: fuchsia;
+    border-radius: 50%;
+    font-size: larger;
+    
+}
