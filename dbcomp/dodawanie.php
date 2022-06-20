@@ -10,7 +10,6 @@
     <fieldset> 
     <legend>Dodawanie zamówień</legend>
     Przedmiot: <input type="text" name="item"> <br>
-    Adres: <input type="text" name="adres"> <br>
     <input type="submit" value="dodaj" > <br>
     </fieldset>
 </form>
@@ -18,15 +17,13 @@
 error_reporting(0);
 $conn=mysqli_connect("localhost", 'root', '','baza');
 $item=$_POST['item'];
-$adres=$_POST['adres'];
-
-$kw1="INSERT into zamowienia values (NULL,'$item','$adres')";
-$kw2="SELECT * from zamowienia";
-
-$wynik = mysqli_query($conn, $kw2);
 
 
-if($item!="" && $adres != ""){
+$kw1="INSERT into zamowienia values (NULL,'$item')";
+
+
+
+if($item!=""){
     mysqli_query($conn, $kw1);
 }
 else{
