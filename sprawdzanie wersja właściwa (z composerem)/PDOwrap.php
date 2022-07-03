@@ -1,11 +1,14 @@
 <?php
-require_once __DIR__ . DIRECTORY_SEPARATOR . 'config.php';
+namespace Classes;
+
+use PDO;
+use PDOException;
 
 class PDOwrap{
 private $pdo;
 
 public function __construct(){
-    $this->pdo = new PDO('mysqli:host=localhost;dbname=baza', config::USERNAME, config::PASSWORD);
+    $this->pdo = new PDO('mysqli:host=localhost;dbname='. Config::DBNAME,Config::USERNAME, Config::PASSWORD);
 }
 
 public function insert($item){
