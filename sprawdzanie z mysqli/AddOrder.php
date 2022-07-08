@@ -1,10 +1,24 @@
 <?php
+require __DIR__ . '/vendor/autoload.php';
+
+class Orders {
+    private $connect, $query;
+    public function __construct( $query, $connect ) {
+        $this->query = $query;
+        $this->connect = $connect;
+        }
+    public function zamowienie() {
+        mysqli_query($this->connect, $this->kw);
+
+    }
+    }
+
 $item=$_POST['item'];
 
-$conn=mysqli_connect("localhost", 'root', '','baza');
-$kw="INSERT into zamowienia values (NULL,'$item')";
+$connect=mysqli_connect("localhost", 'root', '','baza');
+$query="INSERT into zamowienia values (NULL,'$item')";
 if($item!=""){
-$wynik = mysqli_query($conn, $kw);
+    new Orders($query, $connect);
 
     echo("<script>");
     echo('window.location.replace("index.php")');

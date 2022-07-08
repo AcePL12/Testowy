@@ -1,12 +1,26 @@
 <?php
-$idz=$_POST['idzmiany'];
-$itemz=$_POST['itmzmiany'];
+require __DIR__ . '/vendor/autoload.php';
 
-$conn=mysqli_connect("localhost", 'root', '','baza');
-$kw="UPDATE zamowienia SET Przedmiot='$itemz' WHERE id=$idz";
+class Orders {
+   private $connect, $query;
+   public function __construct( $query, $connect ) {
+       $this->query = $query;
+       $this->connect = $connect;
+       }
+   public function zamowienie() {
+       mysqli_query($this->connect, $this->kw);
 
-if($idz!="" && $itemz!=""){
-    mysqli_query($conn, $kw);
+   }
+   }
+
+$idzmiany=$_POST['idzmiany'];
+$itemzmiany=$_POST['itmzmiany'];
+
+$connect=mysqli_connect("localhost", 'root', '','baza');
+$query"UPDATE zamowienia SET Przedmiot='$itemzmiany' WHERE id=$idzmianyg";
+
+if($idzmiany!="" && $itemzmiany!=""){
+    new Orders($query, $connect);
     
     echo("<script>");
     echo('window.location.replace("index.php")');
