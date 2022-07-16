@@ -1,27 +1,21 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
-class Orders {
-   private $connect, $query;
-   public function __construct( $query, $connect ) {
-       $this->query = $query;
-       $this->connect = $connect;
-       }
-   public function zamowienie() {
-       mysqli_query($this->connect, $this->kw);
+use Ordermaker\MySQLIwrapper;
+use Ordermaker\Orders;
 
-   }
-   }
 
-$idzmiany=$_POST['idzmiany'];
-$itemzmiany=$_POST['itmzmiany'];
 
-$connect=mysqli_connect("localhost", 'root', '','baza');
-$query"UPDATE zamowienia SET Przedmiot='$itemzmiany' WHERE id=$idzmianyg";
 
-if($idzmiany!="" && $itemzmiany!=""){
-    new Orders($query, $connect);
-    
+$idchange=$_POST['idchange'];
+$itemchange=$_POST['itemchange'];
+
+
+if($idchange!="" && $itemchange!=""){
+    $mySQLIwrapper = new MySQLIwrapper();
+    $orders=new Orders($mySQLIwrapper);
+    $orders->changeOrder($idchange, $itemchange);
+
     echo("<script>");
     echo('window.location.replace("index.php")');
     echo("</script>");

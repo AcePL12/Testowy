@@ -13,6 +13,6 @@
     "ext-pdo": "*"
   },
   "autoload": {
-    "psr-4": {"Classes\\": ""}
+    "psr-4": {"Ordermaker\\": ""}
   }
 }
