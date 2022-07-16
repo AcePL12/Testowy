@@ -13,8 +13,8 @@
     <form method="POST" action="ChangeOrder.php">
     <fieldset>
         <legend>zmien zamówienie</legend>
-        <input type="number" name="idchange" placeholder="ID"> <br>
-        <input type="text" name="itemchange" placeholder="Przedmiot"> <br>
+        <input type="number" name="idChange" placeholder="ID"> <br>
+        <input type="text" name="itemChange" placeholder="Przedmiot"> <br>
         <input type="submit" value="zmien"> <br>
     </fieldset>
 </form>
@@ -26,3 +26,4 @@
     </fieldset>
 </form>
 
+ 

@@ -4,11 +4,8 @@ require __DIR__ . '/vendor/autoload.php';
 use Ordermaker\MySQLIwrapper;
 use Ordermaker\Orders;
 
-
-
-
-$idchange=$_POST['idchange'];
-$itemchange=$_POST['itemchange'];
+$idchange=$_POST['idChange'];
+$itemchange=$_POST['itemChange'];
 
 
 if($idchange!="" && $itemchange!=""){
