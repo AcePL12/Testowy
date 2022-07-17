@@ -14,8 +14,8 @@ class Orders {
         $this->wrapper->delete($id);
  
      }
-     public function changeOrder($idchange, $itemchange) {
-        $this->wrapper->change($idchange, $itemchange);
+     public function changeOrder($itemchange, $idchange) {
+        $this->wrapper->change($itemchange, $idchange);
  
      }
     }

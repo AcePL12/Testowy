@@ -10,6 +10,7 @@
         <input type="text" name="item" placeholder="Przedmiot"> <br>
         <input type="submit" value="dodaj"> <br>
     </fieldset>
+    </form>
     <form method="POST" action="ChangeOrder.php">
     <fieldset>
         <legend>zmien zamówienie</legend>

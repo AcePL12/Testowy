@@ -9,9 +9,9 @@ $itemchange=$_POST['itemChange'];
 
 
 if($idchange!="" && $itemchange!=""){
-    $mySQLIwrapper = new MySQLIwrapper();
-    $orders=new Orders($mySQLIwrapper);
-    $orders->changeOrder($idchange, $itemchange);
+   $mySQLIwrapper = new MySQLIwrapper();
+   $orders=new Orders($mySQLIwrapper);
+    $orders->changeOrder($itemchange, $idchange);
 
     echo("<script>");
     echo('window.location.replace("index.php")');
